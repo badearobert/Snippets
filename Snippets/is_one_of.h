@@ -7,7 +7,7 @@ namespace Snippets
 	{
 		template<class Expected, class... Received>
 		inline constexpr bool is_one_of = (std::is_same_v<Expected, Received> || ...);
-	}
+	} 
 
 	namespace v2
 	{
@@ -20,12 +20,13 @@ namespace Snippets
 				return (std::is_same_v<Expected, Received> || ...);
 			}
 		};
-	}
+	} 
 
 
 	template<typename T>
-	struct is_something {
+	struct is_something 
+   {
 		static const bool value = v1::is_one_of<T, int, float, double>;
 	};
 
-} // namespace
+} // namespace: Snippets
