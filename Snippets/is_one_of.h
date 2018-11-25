@@ -9,7 +9,7 @@ namespace Snippets
 		inline constexpr bool is_one_of = (std::is_same_v<Expected, Received> || ...);
 	} 
 
-	namespace v2
+	inline namespace v2
 	{
 		template<class Expected>
 		struct is_one_of
